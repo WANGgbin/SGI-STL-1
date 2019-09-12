@@ -346,7 +346,7 @@ public:
   explicit list(const allocator_type& __a = allocator_type()) : _Base(__a) {}
 
   // 指向首元素的迭代器
-  iterator begin()             { return (_Node*)(_M_node->_M_next); }
+  iterator begin()             { return (_Node*)(_M_node->_M_next); }//这里返回使用到了类的自动转化。
   const_iterator begin() const { return (_Node*)(_M_node->_M_next); }
 
   // 指向容器尾端的迭代器
